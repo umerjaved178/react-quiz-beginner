@@ -1,10 +1,15 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import { shuffle } from '../utils/utils'
 
-function API() {
+function API(setapiResult: any) {
+
+    
+      let modifiedAPI: any
+      
+    
     return (
-        <div>
-            
-        </div>
+        modifiedAPI
     )
 }
 

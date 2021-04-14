@@ -5,18 +5,19 @@ interface Props {
     answer: string[];
     questionNumber: number;
     totalQuestion: number;
-    checkAnswer: any
+    checkAnswer: any;
+    disabled: boolean;
 }
 
 function QuestionCard(props: Props) {
     return (
         <div>
             <p>Question No. {props.questionNumber} / {props.totalQuestion}</p>
-            <p>Question: {props.question}</p>
-            <>Options:
+            <p>{props.question}</p>
+            <>
                 {React.Children.toArray(
                     props.answer.map(singleOption => (
-                        <p onClick={props.checkAnswer}>{singleOption}</p>
+                        <div><button onClick={props.checkAnswer} disabled={props.disabled}>{singleOption}</button></div>
                      ))
                     )
                 }
